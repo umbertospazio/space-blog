@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>
+      {% block title %}
+      {% endblock title %}
+      Umberto Spazio
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+<body id={% block body_id %}{% endblock body_id %}>
+
+  <section id="masthead">
+    <h1><a href="/" title="Umberto Spazio">Umberto Spazio</a></h1>
+  </section>
+
+  <div id="content">
+
+    {% block content %}
+    {% endblock content %}
+
+  </div>
+  
+</body>
+</html>

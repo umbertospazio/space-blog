@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+  blog articles |
+{% endblock title %}
+
+{% block body_id %}
+  blog
+{% endblock body_id %}
+
+{% block content %}
+<h1>Articles:</h1>
+<ul>
+  {% for post in posts %}
+
+  <li>
+    <a href="{{post.get_absolute_url}}">{{post.title}}</a><br>
+  </li>
+
+  {% endfor %}
+
+</ul>
+{% endblock content %}

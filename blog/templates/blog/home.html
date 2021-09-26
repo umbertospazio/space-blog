@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block body_id %}
+  home
+{% endblock body_id %}
+
+{% block content %}
+<p>Ciao a todos.</p>
+<p>Stop calling pizza with salame pizzante (spicy salami), pepperoni pizza. Please.</p>
+
+<section id="newestarticles">
+
+  <h2>Newest Articles <small><a href="/blog">see all</a></small></h2>
+  <ul>
+    {% for post in posts %}
+
+    <li>
+      <a href="{{post.get_absolute_url}}">{{post.title}}</a><br>
+    </li>
+
+    {% endfor %}
+
+  </ul>
+</section>
+{% endblock content %}
