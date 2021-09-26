@@ -1,2 +1,3 @@
 # Umberto Spazio Blog
-ciao
+
+Django project for my blog :)
